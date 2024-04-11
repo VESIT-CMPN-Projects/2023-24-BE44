@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./images/bg2.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh; /* Set minimum height to the viewport height */
+            position: relative; /* Set position to relative for footer positioning */
+        }
+        header {
+            background-color: #fff; /* White background */
+            padding: 10px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo img {
+            width: 80px; /* Adjust the width as needed */
+            height: auto;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center; /* Align vertically */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            margin-right: 10px;
+        }
+        
+        .nav-links li a {
+            color: #333; /* Dark gray color for navigation links */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links li a:hover {
+            background-color: #f0f0f0; /* Light gray background on hover */
+            color: #007bff;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-profile img {
+            width: 50px; /* Adjust the size as needed */
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .user-profile span {
+            font-size: 14px;
+            margin-left: 5px; /* Adjust margin as needed */
+        }
+        
+        .apology-container {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow */
+            max-width: 400px;
+            margin: 50px auto; /* Center horizontally */
+        }
+
+        h1 {
+            color: #007bff; /* Blue color for the heading */
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333; /* Dark gray color for the text */
+            margin-bottom: 20px;
+        }
+
+        .sad-face {
+            font-size: 60px;
+            color: #f44336; /* Red color for the sad face */
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #fff; /* White background */
+            color: #000; /* Black text color */
+            padding: 20px 0; /* Adjust padding as needed */
+            text-align: center; /* Center-align text */
+            width: 100%; /* Set width to 100% */
+            position: absolute; /* Set position to absolute */
+            bottom: 0; /* Position at the bottom */
+        }
+
+        footer p {
+            margin-bottom: 10px; /* Adjust margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./images/logo/logo.png" alt="MyWebsite Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="user-profile">
+                    <a href="">
+                        <img src="./images/profile.jpg" alt="User Profile"> 
+                        <span>Admin</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="apology-container">
+        <span class="sad-face">:(</span>
+        <h1>Sorry!</h1>
+        <p>We couldn't find a match for your query.</p>
+        <p>The report you provided has been acknowledged and saved for future reference.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Gaurav Amarnani | Chetaniya Bajaj | Kaplesh Mulchandani | Jayesh Repale</p>
+        <p>&copy; Copyright All Rights Reserved</p>
+    </footer>
+    <!-- End Footer -->
+</body>
+</html>

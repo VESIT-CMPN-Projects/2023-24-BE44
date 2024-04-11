@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Your existing CSS styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/bg4.jpg'); /* Background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #333; /* Dark gray */
+}
+
+header {
+  background-color: #fff; /* White background */
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  width: 80px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #333; /* Dark gray color for navigation links */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #007bff;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile img {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8); /* White with opacity */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+  max-width: 1300px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image-section {
+  width: 50%;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.form-section {
+  width: 40%;
+  padding: 50px;
+  border: 2px solid #333; /* Gray border */
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.form-section h2 {
+  color: #333; /* Dark gray color */
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  margin-bottom: 5px;
+}
+
+.form-section input, .form-section button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+/* Add styling for the new section */
+.relatives-section {
+  width: 40%;
+  padding: 50px;
+  border: 2px solid #333; /* Gray border */
+  border-radius: 10px;    
+}
+
+/* Your existing CSS styles */
+
+/* Footer styles */
+#footer {
+  background-color: #fff; /* White background */
+  color: #333; /* Dark gray text color */
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+#footer p {
+  margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/logo/logo.png" alt="MyWebsite Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li class="user-profile">
+            <a href=""><img src="./images/profile.jpg" alt="User Profile">
+                <span>Admin</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="card">
+      <h1>Match Found!!</h1>
+      <div class="container">
+          <div class="image-section">
+              <h3>Image From Database</h3>
+              <img src="./images/Aarav.jpg" alt="Image Section">
+          </div>
+          <div class="form-section">
+              <h4>Missing Person Details:-</h4>
+              <form>
+                  <label for="name">Name: Aarav Sharma</label>
+                  <label for="age">Age of Person while reporting complaint: 12</label>
+                  <label for="gender">Gender: Male</label>
+                  <label for="aadhar">Aadhar Number: 8888 8888 8888</label>
+                  <label for="MissingYear">Missing Year (The Year in which photo was clicked): 2021</label>
+              </form>
+          </div>
+          <div class="relatives-section">
+              <h4>Relative's Details:-</h4>
+              <!-- Add your relative's details form here -->
+              <label for="name">Name: Manoj Sharma</label>
+              <label for="aadhar">Aadhar Number: 4444 4444 4444</label>
+              <label for="email">Email : sharma.manoj@gmail.com</label>
+              <label for="contact">Contact No.: 7456981230</label>
+          </div>
+      </div>
+  </div>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p>
+            Gaurav Amarnani | Chetaniya Bajaj | Kaplesh Mulchandani | Jayesh Repale
+          </p>
+          <p>&copy; Copyright All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>

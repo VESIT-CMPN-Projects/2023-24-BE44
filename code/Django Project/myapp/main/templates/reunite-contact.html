@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Vendor CSS Files-->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+        #header {
+            background: #fff;
+            transition: all 0.5s;
+            z-index: 997;
+            height: 86px;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #header.fixed-top {
+            height: 70px;
+        }
+
+        #header .logo {
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #header .logo a {
+            color: #222222;
+        }
+
+        #header .logo a span {
+            color: #106eea;
+        }
+
+        #header .logo img {
+            max-height: 40px;
+        }
+
+        .scrolled-offset {
+            margin-top: 70px;
+        }
+
+        /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+        /**
+  * Desktop Navigation 
+  */
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar>ul>li {
+            white-space: nowrap;
+            padding: 10px 0 10px 28px;
+        }
+
+        .navbar a,
+        .navbar a:focus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #222222;
+            white-space: nowrap;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .navbar a i,
+        .navbar a:focus i {
+            font-size: 12px;
+            line-height: 0;
+            margin-left: 5px;
+        }
+
+        .navbar>ul>li>a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #106eea;
+            visibility: hidden;
+            width: 0px;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .navbar a:hover:before,
+        .navbar li:hover>a:before,
+        .navbar .active:before {
+            visibility: visible;
+            width: 100%;
+        }
+
+        .navbar a:hover,
+        .navbar .active,
+        .navbar .active:focus,
+        .navbar li:hover>a {
+            color: #106eea;
+        }
+
+        .navbar .dropdown ul {
+            display: block;
+            position: absolute;
+            left: 28px;
+            top: calc(100% + 30px);
+            margin: 0;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+            transition: 0.3s;
+        }
+
+        .navbar .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar .dropdown ul a {
+            padding: 10px 20px;
+            font-weight: 400;
+        }
+
+        .navbar .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar .dropdown ul a:hover,
+        .navbar .dropdown ul .active:hover,
+        .navbar .dropdown ul li:hover>a {
+            color: #106eea;
+        }
+
+        .navbar .dropdown:hover>ul {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+        }
+
+        .navbar .dropdown .dropdown ul {
+            top: 0;
+            left: calc(100% - 30px);
+            visibility: hidden;
+        }
+
+        .navbar .dropdown .dropdown:hover>ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+            visibility: visible;
+        }
+
+        @media (max-width: 1366px) {
+            .navbar .dropdown .dropdown ul {
+                left: -90%;
+            }
+
+            .navbar .dropdown .dropdown:hover>ul {
+                left: -100%;
+            }
+        }
+
+        /**
+  * Mobile Navigation 
+  */
+        .mobile-nav-toggle {
+            color: #222222;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            line-height: 0;
+            transition: 0.5s;
+        }
+
+        .mobile-nav-toggle.bi-x {
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+            }
+        }
+
+        .navbar-mobile {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(9, 9, 9, 0.9);
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .navbar-mobile .mobile-nav-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+
+        .navbar-mobile a,
+        .navbar-mobile a:focus {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #222222;
+        }
+
+        .navbar-mobile>ul>li {
+            padding: 0;
+        }
+
+        .navbar-mobile a:hover:before,
+        .navbar-mobile li:hover>a:before,
+        .navbar-mobile .active:before {
+            visibility: hidden;
+        }
+
+        .navbar-mobile a:hover,
+        .navbar-mobile .active,
+        .navbar-mobile li:hover>a {
+            color: #106eea;
+        }
+
+        .navbar-mobile .getstarted,
+        .navbar-mobile .getstarted:focus {
+            margin: 15px;
+        }
+
+        .navbar-mobile .dropdown ul {
+            position: static;
+            display: none;
+            margin: 10px 20px;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        }
+
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+
+        .navbar-mobile .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar-mobile .dropdown ul a:hover,
+        .navbar-mobile .dropdown ul .active:hover,
+        .navbar-mobile .dropdown ul li:hover>a {
+            color: #106eea;
+        }
+
+        .navbar-mobile .dropdown>.dropdown-active {
+            display: block;
+        }
+
+        footer {
+            background-color: #fff;
+            /* White background */
+            color: #000;
+            /* Black text color */
+            padding: 20px 0;
+            /* Adjust padding as needed */
+            text-align: center;
+            /* Center-align text */
+            border-top: 2px solid #333;
+        }
+
+        /* User Profile Section Styles */
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-profile .username {
+            margin: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: auto;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .contact {
+            padding: 40px 0;
+        }
+
+        .contact .section-title {
+            text-align: center;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-card {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-right: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-card:last-child {
+            margin-right: 0;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            margin: 0;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .map-card,
+        .form-card {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .map-card iframe {
+            width: 100%;
+            height: 450px;
+        }
+
+        .form-card form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .php-email-form button[type="submit"] {
+            background-color: #106eea;
+            border: none;
+            padding: 12px 30px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .php-email-form button[type="submit"]:hover {
+            background-color: #0c4cb8;
+        }
+
+        /* Added CSS to align name and email fields in one line */
+        .php-email-form .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .php-email-form .form-group .form-control {
+            flex: 1;
+        }
+
+        .php-email-form .form-group:first-child .form-control {
+            margin-right: 10px;
+        }
+
+        .section-title h1 span {
+            color: #106eea;
+        }
+
+        .contact-cards i {
+            color: #106eea;
+            font-size: 32px;
+            border: 2px dotted #b3d1fa;
+            border-radius: 50%;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="index.html"><img src="./images/logo/logo.png" alt="logo" width="70px"></a></h1>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="home.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="about.html">About Us</a></li>
+                    <li><a class="nav-link scrollto" href="services.html">Services</a></li>
+                    <li><a class="nav-link scrollto active" href="contact.html">Contact Us</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+                <div class="user-profile">
+                    <span class="username">Admin</span>
+                    <img src="./images/profile.jpg" alt="Profile" onclick="window.location.href='#';">
+                </div>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h1><span>Contact Us</span></h1>
+                <p>"Contact Us to Create Impact."</p>
+            </div>
+
+            <div class="contact-cards">
+                <div class="contact-card address-card">
+                    <i class="bx bx-map"></i>
+                    <h3>Our Address</h3>
+                    <p>Mumbai</p>
+                </div>
+                <div class="contact-card email-card">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>reachouttous@gmail.com</p>
+                </div>
+                <div class="contact-card phone-card">
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Call Us</h3>
+                    <p>+022 61532500</p>
+                </div>
+            </div>
+
+            <div class="contact-details">
+                <div class="map-card">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4233288060486!2d72.8864055748008!3d19.045116352942184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8add9569a29%3A0xb7ad04bf9a389df7!2sVivekanand%20Education%20Society&#39;s%20Institute%20Of%20Technology%20(VESIT)!5e0!3m2!1sen!2sin!4v1697210620564!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="form-card">
+                    <form action="" method="post" role="form" class="php-email-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                required></textarea>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+  <footer>
+    <div>
+      <p>Gaurav Amarnani | Chetaniya Bajaj | Kaplesh Mulchandani | Jayesh Repale</p>
+      <p>&copy; Copyright All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./images/bg4.jpg'); /* Replace 'background-image.jpg' with your actual image file */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+  }
+
+  .logo img {
+    width: 90px;
+    height: 40px;
+  }
+
+  .profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end; /* Align options to the right */
+  }
+
+  .nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0.8); /* 80% opacity white */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    margin-top: 150px;
+  }
+
+  .image-sections {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .image-section {
+    text-align: center;
+  }
+
+  .image-section h2 {
+    margin-bottom: 10px;
+  }
+
+  .image-section img {
+    max-width: 400px;
+    max-height: 600px;
+  }
+
+  .nav-links {
+    margin-left: 850px;
+  }
+
+  .nav-links ul li a:hover {
+    color: #106eea;
+  }
+
+  .profile .username {
+    margin: 10px;
+    }
+  .profile {
+    cursor: pointer;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  footer {
+    background-color: #fff;
+    /* White background */
+    color: #000;
+    /* Black text color */
+    padding: 20px 0;
+    /* Adjust padding as needed */
+    text-align: center;
+    /* Center-align text */
+    border-top: 2px solid #333;
+    margin-top: 150px;
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="./images/logo/logo.png" alt="logo">
+    </div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="profile">
+      <span class="username">Admin</span>
+      <img src="./images/profile.jpg" alt="profile">
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h1>Changes made successfully!</h1>
+      <div class="image-sections">
+        <div class="image-section">
+          <h2>Before Image:</h2>
+          <img src="./images/Aarav.jpg" alt="Image 1">
+        </div>
+        <div class="image-section">
+          <h2>After Image:</h2>
+          <img src="./images/Aarav.jpg" alt="Image 2">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <p>Gaurav Amarnani | Chetaniya Bajaj | Kaplesh Mulchandani | Jayesh Repale</p>
+      <p>&copy; Copyright All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</body>
+</html>
